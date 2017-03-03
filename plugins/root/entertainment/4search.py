@@ -12,7 +12,7 @@ def main(data):
 				if letter == '-':
 					letter = ' '
 		results = []
-		rawjson = urllib2.urlopen('http://api.4chan.org/' + board + '/catalog.json').read()
+		rawjson = urllib2.urlopen('http://a.4cdn.org/' + board + '/catalog.json').read()
 		time.sleep(1)
 		parsedjson = json.loads(rawjson)
 		count = 0
@@ -30,7 +30,7 @@ def main(data):
 						#get thread number
 						num = thread['no']
 						try:
-							rawreplies = urllib2.urlopen('http://api.4chan.org/' + board + '/res/' + str(num) + '.json').read()
+							rawreplies = urllib2.urlopen('http://a.4cdn.org/' + board + '/res/' + str(num) + '.json').read()
 						except:
 							print "Thread 404'd"
 							break
