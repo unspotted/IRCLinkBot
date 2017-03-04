@@ -55,12 +55,12 @@ def main(data):
 									retme.append('http://boards.4chan.org/' + board + '/res/' + str(thread['no']))
 									print 'http://boards.4chan.org/' + board + '/res/' + str(thread['no'])
 		if retme == []:
-			return say(args['nick'], "No threads found")
+			return say(args['channel'], "No threads found")
 		retmeforrealthistime = []
 		lt = 15
 		appendloop = 0
 		for i in retme:
 			if appendloop <= lt:
-				retmeforrealthistime.append(say(args['nick'], i))
+				retmeforrealthistime.append(say(args['channel'], i))
 			appendloop += 1
 		return ''.join(retmeforrealthistime)
