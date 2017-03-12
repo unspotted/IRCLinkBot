@@ -1,6 +1,6 @@
 def main(data):
-        if '!r' in data['recv']:
-                args = argv('!r', data['recv'])
+        if '!roll' in data['recv']:
+                args = argv('!roll', data['recv'])
                 if 'd' in args['argv'][1] or 'D' in args['argv'][1]:
                         args['argv'][1].replace('D','d')
                         pos_of_d = re.search(r"[^a-zA-Z](d)[^a-zA-Z]", args['argv'][1]).start(1)
